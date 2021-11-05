@@ -2,8 +2,8 @@
 	"name": "@rishabh7g/monorepo-root",
 	"private": true,
 	"scripts": {
-		"start": "lerna exec --scope @rishabh7g/app -- yarn start",
-		"build": "lerna exec --scope @rishabh7g/app -- yarn build"
+		"start": "lerna exec --scope @rishabh7g/weather-app -- yarn start",
+		"build": "lerna exec --scope @rishabh7g/weather-app -- yarn build"
 	},
 	"devDependencies": {
 		"craco": "^0.0.3",

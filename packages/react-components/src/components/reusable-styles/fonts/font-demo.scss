@@ -1,0 +1,13 @@
+.font-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+	border: 1px solid #333;
+	border-radius: 10px;
+	padding: 1rem;
+}
+.font-text {
+	white-space: pre-line;
+	word-wrap: break-word;
+}
+.font-detail {
+}

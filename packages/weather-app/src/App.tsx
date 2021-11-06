@@ -8,7 +8,11 @@ function App() {
 		<div className='App'>
 			<header className='App-header'>
 				<img src={logo} className='App-logo' alt='logo' />
-				<Button label='Click here' onClick={() => alert('hello')}></Button>
+				<Button
+					label='Click here'
+					onClick={() => alert('hello')}
+					size='small'
+					primary></Button>
 			</header>
 		</div>
 	);

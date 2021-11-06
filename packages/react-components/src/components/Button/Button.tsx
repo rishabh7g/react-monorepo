@@ -1,9 +1,10 @@
+import { CSSProperties } from 'react';
 import './Button.scss';
 interface ButtonProps {
 	label: string;
 	primary?: boolean;
 	size?: 'small' | 'medium' | 'large';
-	style?: object;
+	style?: CSSProperties;
 	fontColor?: string;
 	onClick?: () => void;
 }
@@ -21,7 +22,7 @@ const Button = ({
 		<button
 			type='button'
 			className={['button', `button-size--${size}`, mode].join(' ')}
-			{...style}
+			style={style}
 			{...props}>
 			{label}
 		</button>

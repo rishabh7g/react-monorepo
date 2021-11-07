@@ -12,7 +12,30 @@ const Template: ComponentStory<typeof ColorDemo> = (args) => (
 
 export const OrangeColorDemo = Template.bind({});
 OrangeColorDemo.args = {
-	backgroundColor: 'rgba(244, 162, 97, 1)',
-	label: 'rgba(244, 162, 97, 1)',
 	wallpaperColor: '#fff',
+	rgbValue: {
+		r: 244,
+		g: 162,
+		b: 97,
+	},
+};
+
+export const GreenColorDemo = Template.bind({});
+GreenColorDemo.args = {
+	wallpaperColor: '#fff',
+	rgbValue: {
+		r: 42,
+		g: 157,
+		b: 143,
+	},
+};
+
+export const GrayColorDemo = Template.bind({});
+GrayColorDemo.args = {
+	wallpaperColor: '#fff',
+	rgbValue: {
+		r: 189,
+		g: 198,
+		b: 197,
+	},
 };

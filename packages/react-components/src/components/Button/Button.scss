@@ -1,3 +1,8 @@
+button.button {
+	border-width: 1px;
+	border-radius: 8px;
+}
+
 .button-mode--secondary {
 	color: #333;
 	background-color: transparent;
@@ -7,6 +12,7 @@
 .button-mode--primary {
 	color: white;
 	background-color: #1ea7fd;
+	border-color: #1983c5;
 }
 
 .button-size--small {

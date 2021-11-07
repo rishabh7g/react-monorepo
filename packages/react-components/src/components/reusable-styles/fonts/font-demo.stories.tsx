@@ -11,7 +11,41 @@ const Template: ComponentStory<typeof FontDemo> = (args) => (
 	<FontDemo {...args} />
 );
 
-export const LatoFontFamily = Template.bind({});
-LatoFontFamily.args = {
-	size: 'small',
+export const SansSerifFont = Template.bind({});
+SansSerifFont.args = {
+	family: 'sans-serif',
+};
+
+export const SerifFont = Template.bind({});
+SerifFont.args = {
+	family: 'serif',
+};
+
+
+
+
+
+export const LatoFont = Template.bind({});
+LatoFont.args = {
+	family: 'lato',
+};
+
+export const CabinFont = Template.bind({});
+CabinFont.args = {
+	family: 'cabin',
+};
+
+export const InterFont = Template.bind({});
+InterFont.args = {
+	family: 'inter',
+};
+
+export const JostFont = Template.bind({});
+JostFont.args = {
+	family: 'jost',
+};
+
+export const OverpassFont = Template.bind({});
+OverpassFont.args = {
+	family: 'overpass',
 };

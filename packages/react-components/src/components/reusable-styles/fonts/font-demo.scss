@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Inter&family=Jost&family=Lato&family=Overpass&display=swap');
+
 .font-wrapper {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-evenly;
 	border: 1px solid #333;
 	border-radius: 10px;

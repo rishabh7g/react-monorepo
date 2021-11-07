@@ -1,0 +1,33 @@
+.InputFieldWrapper {
+	input {
+		display: block;
+		margin-top: 0.5rem;
+		padding: 0;
+		width: 100%;
+		max-width: 20rem;
+		height: auto;
+		line-height: normal;
+		font-size: 1.875em;
+		color: #333333;
+		border: none;
+		border-bottom: 2px solid #d6d6d6;
+
+		&::placeholder {
+			color: #adadad;
+			opacity: 1;
+			line-height: normal;
+		}
+
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
+
+	label {
+		color: #606060;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: +0.5px;
+	}
+}

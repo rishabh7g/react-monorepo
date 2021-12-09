@@ -1,6 +1,5 @@
-import { MiniCard } from '@rishabh7g/react-components';
-import moment from 'moment';
 import React, { useEffect, useState } from 'react';
+import Weather from 'src/components/weather/Weather';
 import './App.css';
 
 function App() {
@@ -30,17 +29,7 @@ function App() {
 
 	return (
 		<div className='App'>
-			{/* {data ? <Weather weatherData={data} /> : <div>data not found</div>} */}
-			{data ? (
-				<MiniCard
-					heading={data.name}
-					subHeading={moment().format('dddd')}
-					content={data.main.temp}
-					subContent={data.weather[0].main}
-				/>
-			) : (
-				<div>data not found</div>
-			)}
+			{data ? <Weather weatherData={data} /> : <div>data not found</div>}
 		</div>
 	);
 }

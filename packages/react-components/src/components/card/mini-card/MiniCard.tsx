@@ -10,15 +10,15 @@ interface MiniCardProps {
 
 const MiniCard = (miniCardProps: MiniCardProps) => {
 	return (
-		<div className='box mini-card'>
-			<div className='box header'>
-				<div className='box place-time'>
+		<div className='mini-card'>
+			<div className='header'>
+				<div className='place-time'>
 					<p className='city'>{miniCardProps.heading}</p>
 					<p className='date'>{miniCardProps.subHeading}</p>
 				</div>
 			</div>
-			<div className='box icon'></div>
-			<div className='box content'>
+			<div className='icon'></div>
+			<div className='content'>
 				<p className='main'>{miniCardProps.content}</p>
 				<p className='secondary'>{miniCardProps.subContent}</p>
 			</div>

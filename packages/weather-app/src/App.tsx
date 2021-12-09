@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Weather from 'src/components/weather/Weather';
+import { MiniCard } from '@rishabh7g/react-components';
 import './App.css';
 
 function App() {
@@ -29,7 +30,17 @@ function App() {
 
 	return (
 		<div className='App'>
-			{data ? <Weather weatherData={data} /> : <div>data not found</div>}
+			{/* {data ? <Weather weatherData={data} /> : <div>data not found</div>} */}
+			{data ? (
+				<MiniCard
+					heading='Bengaluru'
+					subHeading=''
+					content='24 C'
+					subContent=''
+				/>
+			) : (
+				<div>data not found</div>
+			)}
 		</div>
 	);
 }

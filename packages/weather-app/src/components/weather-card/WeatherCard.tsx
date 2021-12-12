@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import Cloudy from 'src/assets/svg/Cloudy.svg';
 import Ellipse from 'src/assets/svg/Ellipse.svg';
+import styled from 'styled-components';
 
 const Card = styled.div`
 	position: relative;
@@ -34,12 +34,19 @@ const Temperature = styled.p`
 	margin: 0;
 `;
 
-const WeatherCard = () => {
+interface WeatherCardProps {
+	weatherType: string;
+	temperature: string;
+}
+
+const WeatherCard = ({ weatherType, temperature }: WeatherCardProps) => {
+	if (!weatherType && !temperature) return <div>No data found</div>;
+
 	return (
 		<Card>
 			<div>
-				<WeatherSummary>Rainy</WeatherSummary>
-				<Temperature>25&deg; C</Temperature>
+				<WeatherSummary>{weatherType}</WeatherSummary>
+				<Temperature>{temperature}&deg; C</Temperature>
 			</div>
 			<div>
 				<WeatherIcon src={Cloudy} alt='Cloud icon' />

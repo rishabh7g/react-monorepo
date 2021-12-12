@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
 import Logo from 'src/assets/svg/Logo.svg';
+import styled from 'styled-components';
 
 const TopRow = styled.div`
 	width: 100%;
@@ -18,7 +18,13 @@ const SearchForm = styled.div`
 
 const SearchButton = styled.button``;
 
-const Navbar = () => {
+interface NavbarProps {
+	searchHandler: (city: string) => void;
+}
+
+const Navbar = (props: NavbarProps) => {
+	const [searchText, setSearchText] = useState('');
+
 	return (
 		<TopRow>
 			<div className='logo'>
@@ -26,10 +32,18 @@ const Navbar = () => {
 			</div>
 			<SearchForm>
 				<div className='searchbox'>
-					<input type='text' placeholder='Enter the city'></input>
+					<input
+						type='text'
+						placeholder='Enter the city'
+						value={searchText}
+						onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+							setSearchText(e.target.value);
+						}}></input>
 				</div>
 				<div className='searchbutton'>
-					<SearchButton>Search</SearchButton>
+					<SearchButton onClick={() => props.searchHandler(searchText)}>
+						Search
+					</SearchButton>
 				</div>
 			</SearchForm>
 		</TopRow>

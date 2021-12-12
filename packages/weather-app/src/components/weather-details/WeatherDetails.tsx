@@ -55,6 +55,7 @@ interface WeatherDetailsProps {
 }
 
 const WeatherDetails = ({ city }: WeatherDetailsProps) => {
+	const [cityName, setCityName] = useState<string>('');
 	const [temperature, setTemperature] = useState<string>('');
 	const [weatherType, setWeatherType] = useState<string>('');
 	const [day, setDay] = useState<string>('');
@@ -68,7 +69,7 @@ const WeatherDetails = ({ city }: WeatherDetailsProps) => {
 		const day = moment().format('dddd');
 		const temp = `${Math.floor(data.main.temp)}`;
 		const description = data.weather[0].main;
-
+		setCityName(data.name);
 		setWeatherType(description);
 		setTemperature(temp);
 		setDate(date);
@@ -109,7 +110,7 @@ const WeatherDetails = ({ city }: WeatherDetailsProps) => {
 					weatherType={weatherType}
 					temperature={temperature}></WeatherCard>
 				<CityDetail>
-					<CityName>{city}</CityName>
+					<CityName>{cityName}</CityName>
 					<Date>{date}</Date>
 					<Date>{day}</Date>
 				</CityDetail>

@@ -10,7 +10,7 @@ const refresh = () => {
 const CardExampleCard = ({ weatherData }: any) => {
 	const city = weatherData.name;
 	const date = moment().format('LL');
-	const temp = `${Math.ceil(weatherData.main.temp)} C`;
+	const temp = `${Math.floor(weatherData.main.temp)} C`;
 	const description = weatherData.weather[0].main;
 	return (
 		<MiniCard

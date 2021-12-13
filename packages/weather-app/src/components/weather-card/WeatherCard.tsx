@@ -1,6 +1,7 @@
 import Cloudy from 'src/assets/svg/Cloudy.svg';
 import Ellipse from 'src/assets/svg/Ellipse.svg';
 import styled from 'styled-components';
+import { device } from 'src/const/device/Device';
 
 const Card = styled.div`
 	position: relative;
@@ -11,6 +12,16 @@ const Card = styled.div`
 	width: 13.5rem;
 	border-radius: 4px;
 	background: var(--color-others-blue);
+
+	@media ${device.laptop} {
+		height: 15rem;
+		width: 12rem;
+	}
+
+	@media ${device.desktop} {
+		height: 16.56rem;
+		width: 13.5rem;
+	}
 `;
 
 const WeatherIcon = styled.img`
@@ -23,6 +34,10 @@ const BackgroundEllipse = styled.img`
 	left: 0;
 	bottom: -12px;
 	z-index: 0;
+
+	@media (min-width: 96em) {
+		height: 5.375em;
+	}
 `;
 
 const WeatherSummary = styled.p`

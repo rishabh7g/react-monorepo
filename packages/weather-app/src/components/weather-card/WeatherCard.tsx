@@ -1,7 +1,7 @@
-import Cloudy from 'src/assets/svg/Cloudy.svg';
 import Ellipse from 'src/assets/svg/Ellipse.svg';
-import styled from 'styled-components';
+import { WeatherIcon } from 'src/components/weather-card/WeatherIcon';
 import { device } from 'src/const/device/Device';
+import styled from 'styled-components';
 
 const Card = styled.div`
 	position: relative;
@@ -24,19 +24,18 @@ const Card = styled.div`
 	}
 `;
 
-const WeatherIcon = styled.img`
-	position: relative;
-	z-index: 2;
-`;
-
 const BackgroundEllipse = styled.img`
 	position: absolute;
 	left: 0;
 	bottom: -12px;
 	z-index: 0;
 
-	@media (min-width: 96em) {
+	@media ${device.laptop} {
 		height: 5.375em;
+	}
+
+	@media ${device.desktop} {
+		height: 6.0625em;
 	}
 `;
 
@@ -64,7 +63,7 @@ const WeatherCard = ({ weatherType, temperature }: WeatherCardProps) => {
 				<Temperature>{temperature}&deg; C</Temperature>
 			</div>
 			<div>
-				<WeatherIcon src={Cloudy} alt='Cloud icon' />
+				<WeatherIcon weatherType={weatherType} />
 				<BackgroundEllipse src={Ellipse} alt='Ellipse background' />
 			</div>
 		</Card>

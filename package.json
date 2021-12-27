@@ -6,6 +6,7 @@
 		"build": "lerna exec --scope @rishabh7g/weather-app -- yarn build"
 	},
 	"devDependencies": {
+		"@manypkg/cli": "^0.19.1",
 		"craco": "^0.0.3",
 		"lerna": "^4.0.0"
 	},

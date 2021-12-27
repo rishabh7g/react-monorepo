@@ -5,7 +5,7 @@ const packages = [];
 packages.push(path.join(__dirname, '../react-components/src'));
 
 /**
- * Why are we using this file: 
+ * Why are we using this file:
  * You may need an additional loader to handle the result of these loaders.
  *
  * Solution:
